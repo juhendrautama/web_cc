@@ -3,8 +3,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up"><?php // echo $beranda->t_h1?></h1>
-            <h2 data-aos="fade-up" data-aos-delay="400"><?php // echo $beranda->t_h2?></h2>
+            <h1 data-aos="fade-up"><?php // echo $beranda->t_h1
+                                    ?></h1>
+            <h2 data-aos="fade-up" data-aos-delay="400"><?php // echo $beranda->t_h2
+                                                        ?></h2>
             <div data-aos="fade-up" data-aos-delay="600">
               <div class="text-center text-lg-start">
                 <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
@@ -15,7 +17,8 @@
             </div>
           </div>
           <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="upload/content/<?php // echo $beranda->hero_image?>" class="img-fluid" alt="" />
+            <img src="upload/content/<?php // echo $beranda->hero_image
+                                      ?>" class="img-fluid" alt="" />
           </div>
         </div>
       </div>
@@ -23,37 +26,41 @@
      End Hero -->
 
     <main id="main">
-      <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing" style="margin-top:30px;">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <p>Paket Penerbitan Buku</p>
-            <h2 class="mt-3">Pilihan paket penerbitan yang bisa Anda pilih untuk mendapatkan harga yang lebih terjangkau.</h2>
-          </header>
+        <!-- ======= Pricing Section ======= -->
+        <section id="pricing" class="pricing" style="margin-top:30px;">
+            <div class="container" data-aos="fade-up">
+                <header class="section-header">
+                    <p>Paket Penerbitan Buku</p>
+                    <h2 class="mt-3">Pilihan paket penerbitan yang bisa Anda pilih untuk mendapatkan harga yang lebih
+                        terjangkau.</h2>
+                </header>
 
-          <div class="row gy-4" data-aos="fade-left">
-          <?php foreach($paket->result() as $paket){?>
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-              <div class="box">
-                <?php 
-                  if ($paket->terlaris=="Y") {
-                    echo'<span class="featured">Terlaris</span>';
+                <div class="row gy-4" data-aos="fade-left">
+                    <?php foreach ($paket->result() as $paket) { ?>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="box">
+                            <?php
+                  if ($paket->terlaris == "Y") {
+                    echo '<span class="featured">Terlaris</span>';
                   }
-                ?>
-                <h3><?php echo $paket->nama_paket ?></h3>
-                <div class="price"><sup>Rp.</sup><?php echo number_format($paket->harga, 0, ",", ".")?><span></span></div>
-                <img src="upload/content/<?php echo $paket->image ?>" class="img-fluid" alt="" />
-                  <?php echo $paket->detail ?>
-                <a href="https://api.whatsapp.com/send?phone=<?php echo $paket->no_hp?>&text=Hallo%2C%20saya%20ingin%20memesan%20paket%20penerbitan%20buku" class="btn-buy">Pesan</a>
-              </div>
+                  ?>
+                            <h3><?php echo $paket->nama_paket ?></h3>
+                            <div class="price">
+                                <sup>Rp.</sup><?php echo number_format($paket->harga, 0, ",", ".") ?><span></span>
+                            </div>
+                            <img src="upload/content/<?php echo $paket->image ?>" class="img-fluid" alt="" />
+                            <?php echo $paket->detail ?>
+                            <a href="https://api.whatsapp.com/send?phone=<?php echo $paket->no_hp ?>&text=Hallo%2C%20saya%20ingin%20memesan%20paket%20penerbitan%20buku"
+                                class="btn-buy">Pesan</a>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
             </div>
-            <?php } ?>
-          </div>
-        </div>
-      </section>
-      <!-- End Pricing Section -->
+        </section>
+        <!-- End Pricing Section -->
 
-      <!-- ======= Services Section 
+        <!-- ======= Services Section 
       <section id="penawaran" class="services">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
@@ -63,71 +70,79 @@
 
           <div class="row gy-4">
             
-          <?php //foreach($penawaran->result() as $penawaran){?>
+          <?php //foreach($penawaran->result() as $penawaran){
+          ?>
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-box <?php //echo $penawaran->color?>">
-                <i class="<?php //echo $penawaran->icon?> icon"></i>
-                <h3><?php// echo $penawaran->penawaran?></h3>
-                <p><?php //echo $penawaran->deskripsi?></p>
+              <div class="service-box <?php //echo $penawaran->color
+                                      ?>">
+                <i class="<?php //echo $penawaran->icon
+                          ?> icon"></i>
+                <h3><? php // echo $penawaran->penawaran
+                    ?></h3>
+                <p><?php //echo $penawaran->deskripsi
+                    ?></p>
               </div>
             </div>
-          <?php //} ?>
+          <?php //} 
+          ?>
             
           </div>
         </div>
       </section>
       End Services Section -->
 
-      <!-- ======= About Section ======= -->
-      <section id="about" style="background-color: #012970" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="row gx-0">
-            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-              <div class="content">
-                <!--<h3>Who We Are</h3>-->
-                <h2>"<?php echo $quote->quote?>"</h2>
-                <p>
-                  <?php echo $quote->deskripsi?>
-                </p>
-                <!-- <div class="text-center text-lg-start">
+        <!-- ======= About Section ======= -->
+        <section id="about" style="background-color: #012970" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="row gx-0">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="content">
+                            <!--<h3>Who We Are</h3>-->
+                            <h2>"<?php echo $quote->quote ?>"</h2>
+                            <p>
+                                <?php echo $quote->deskripsi ?>
+                            </p>
+                            <!-- <div class="text-center text-lg-start">
                   <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                     <span>Read More</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>-->
-              </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-              <img src="upload/content/<?php echo $quote->foto?>" class="img-fluid" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Section -->
-
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
-          <div class="row gy-4">
-          <?php foreach($jumlah->result() as $jumlah){?>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="<?php echo $jumlah->icon?>"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="<?php echo $jumlah->jumlah?>" data-purecounter-duration="1" class="purecounter"></span>
-                  <p><?php echo $jumlah->nama_karya?></p>
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="upload/content/<?php echo $quote->foto ?>" class="img-fluid" alt="" />
+                    </div>
                 </div>
-              </div>
             </div>
-            <?php } ?>
-          </div>
-        </div>
-      </section>
-      <!-- End Counts Section -->
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Counts Section ======= -->
+        <!-- <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+                <div class="row gy-4">
+                    <?php foreach ($jumlah->result() as $jumlah) { ?>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="<?php echo $jumlah->icon ?>"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="<?php echo $jumlah->jumlah ?>"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p><?php echo $jumlah->nama_karya ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </section> -->
+        <!-- End Counts Section -->
 
 
-<!-- ======= Portfolio Section 
+        <!-- ======= Portfolio Section 
       <section id="project" style="background-color: #012970" class="portfolio">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
@@ -147,56 +162,62 @@
           </div>
 
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          <?php //foreach($project->result() as $project){?>
+          <?php //foreach($project->result() as $project){
+          ?>
             <div class="col-lg-3 col-md-6 portfolio-item">
               <div class="portfolio-wrap">
-                <img src="upload/content/<?php // echo $project->image?>" class="img-fluid" alt="" />
+                <img src="upload/content/<?php // echo $project->image
+                                          ?>" class="img-fluid" alt="" />
                 <div class="portfolio-info">
-                  <h4><?php // echo $project->nama_project?></h4>
+                  <h4><?php // echo $project->nama_project
+                      ?></h4>
                   <div class="portfolio-links">
-                    <a href="upload/content/<?php // echo $project->image?>" data-gallery="portfolioGallery" class="portfokio-lightbox" title="<?php echo '<strong>'.$project->nama_project.'</strong>'.'<br><br>'.$project->deskripsi?> "><i class="bi bi-eye"></i></a>
+                    <a href="upload/content/<?php // echo $project->image
+                                            ?>" data-gallery="portfolioGallery" class="portfokio-lightbox" title="<?php echo '<strong>' . $project->nama_project . '</strong>' . '<br><br>' . $project->deskripsi ?> "><i class="bi bi-eye"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-eye"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <?php // } ?>
+            <?php // } 
+            ?>
           </div>
         </div>
       </section>
        End Portfolio Section -->
 
-      <!-- ======= Testimonials Section ======= -->
-      <section id="review" class="testimonials">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <p>Testimoni Klien</p>
-            <h2 class="mt-3">Apa yang dikatakan klien setelah menggunakan jasa kami ?</h2>
-          </header>
+        <!-- ======= Testimonials Section ======= -->
+        <section id="review" class="testimonials">
+            <div class="container" data-aos="fade-up">
+                <header class="section-header">
+                    <p>Testimoni Klien</p>
+                    <h2 class="mt-3">Apa yang dikatakan klien setelah menggunakan jasa kami ?</h2>
+                </header>
 
-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-            <div class="swiper-wrapper" style="height:500px;">
-            <?php foreach($testimoni->result() as $testimoni){?>
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p><?php echo $testimoni->testimoni?></p>
-                  <div class="profile mt-auto">
-                    <img src="upload/content/<?php echo $testimoni->image?>" class="testimonial-img" alt="" />
-                    <h3><?php echo $testimoni->nama?></h3>
-                    <h4><?php echo $testimoni->pekerjaan?></h4>
-                  </div>
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper" style="height:500px;">
+                        <?php foreach ($testimoni->result() as $testimoni) { ?>
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p><?php echo $testimoni->testimoni ?></p>
+                                <div class="profile mt-auto">
+                                    <img src="upload/content/<?php echo $testimoni->image ?>" class="testimonial-img"
+                                        alt="" />
+                                    <h3><?php echo $testimoni->nama ?></h3>
+                                    <h4><?php echo $testimoni->pekerjaan ?></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                        <?php } ?>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-              </div>
-              <!-- End testimonial item -->
-            <?php } ?>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
+        </section>
+        <!-- End Testimonials Section -->
 
-      <!-- ======= Clients Section 
+        <!-- ======= Clients Section 
       <section id="clients" style="background-color: #012970" class="clients">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
@@ -206,9 +227,11 @@
 
           <div class="clients-slider swiper">
             <div class="swiper-wrapper align-items-center" style="height:100px;">
-              <?php //foreach($klien->result() as $klien){?>
-                <div class="swiper-slide"><img src="upload/content/<?php echo $klien->img_klien?>" class="img-fluid" alt="" /></div>
-              <?php// } ?>
+              <?php //foreach($klien->result() as $klien){
+              ?>
+                <div class="swiper-slide"><img src="upload/content/<?php echo $klien->img_klien ?>" class="img-fluid" alt="" /></div>
+              <? php // } 
+              ?>
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -216,35 +239,38 @@
       </section>
       End Clients Section -->
 
-      <!-- ======= Recent Blog Posts Section ======= -->
-      <section id="blog" class="recent-blog-posts">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <p>Postingan Blog</p>
-            <h2 class="mt-3">Sejumlah konten menarik terkait buku, literasi, dan penerbitan</h2>
-          </header>
+        <!-- ======= Recent Blog Posts Section ======= -->
+        <section id="blog" class="recent-blog-posts">
+            <div class="container" data-aos="fade-up">
+                <header class="section-header">
+                    <p>Postingan Blog</p>
+                    <h2 class="mt-3">Sejumlah konten menarik terkait buku, literasi, dan penerbitan</h2>
+                </header>
 
-          <div class="row">
-          <?php foreach($blog->result() as $blog){?>
-            <div class="col-lg-3">
-              <div class="post-box">
-                <div class="post-img"><img src="upload/content/<?php echo $blog->image?>" class="img-fluid" alt="" /></div>
-                <span class="post-date"><?php echo $blog->tgl_post?></span>
-                <h3 class="post-title"><?php echo $blog->judul?></h3>
-                <a href="home/blog_detail/<?php echo $blog->id_blog ?>" class="readmore stretched-link mt-auto"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
-              </div>
+                <div class="row">
+                    <?php foreach ($blog->result() as $blog) { ?>
+                    <div class="col-lg-3">
+                        <div class="post-box">
+                            <div class="post-img"><img src="upload/content/<?php echo $blog->image ?>" class="img-fluid"
+                                    alt="" /></div>
+                            <span class="post-date"><?php echo $blog->tgl_post ?></span>
+                            <h3 class="post-title"><?php echo $blog->judul ?></h3>
+                            <a href="home/blog_detail/<?php echo $blog->id_blog ?>"
+                                class="readmore stretched-link mt-auto"><span>Selengkapnya</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+                <div class="text-center">
+                    <a href="home/blog" class="btn btn-primary mt-5"><span>Tampilkan Selengkapnya</span></a>
+                </div>
             </div>
-            <?php } ?>
-          </div>
-          <div class="text-center">
-            <a href="home/blog" class="btn btn-primary mt-5"><span>Tampilkan Selengkapnya</span></a>
-          </div>
-        </div>
-      </section>
-      <!-- End Recent Blog Posts Section -->
-      
-      
-      <!-- ======= Team Section 
+        </section>
+        <!-- End Recent Blog Posts Section -->
+
+
+        <!-- ======= Team Section 
       <section id="tim" class="team">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
@@ -253,36 +279,41 @@
           </header>
 
           <div class="row gy-4">
-          <?php// foreach($tim->result() as $tim){?>
+          <? php // foreach($tim->result() as $tim){
+          ?>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="member">
                 <div class="member-img">
-                  <img src="upload/content/<?php //echo $tim->image?>" class="img-fluid" alt="" />
+                  <img src="upload/content/<?php //echo $tim->image
+                                            ?>" class="img-fluid" alt="" />
                 </div>
                 <div class="member-info">
-                  <h4><?php// echo $tim->nama?></h4>
-                  <span><?php //echo $tim->jabatan?></span>
+                  <h4><? php // echo $tim->nama
+                      ?></h4>
+                  <span><?php //echo $tim->jabatan
+                        ?></span>
                 </div>
               </div>
             </div>
-            <?php //} ?>
+            <?php //} 
+            ?>
           </div>
         </div>
       </section>
       End Team Section -->
 
-      <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
 
-      <div class="container" data-aos="fade-up">
+            <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <p>Hubungi Kami</p>
-          <h2 class="mt-3">Hubungi kami melalui form berikut</h2>
-        </header>
+                <header class="section-header">
+                    <p>Hubungi Kami</p>
+                    <h2 class="mt-3">Hubungi kami melalui form berikut</h2>
+                </header>
 
-        <div class="row gy-4">
-<!--
+                <div class="row gy-4">
+                    <!--
           <div class="col-lg-6">
 
             <div class="row gy-4">
@@ -318,31 +349,33 @@
 
           </div>-->
 
-          <div class="col-lg-12">
-            <form action="home/contact" method="post" target="_blank">
-              <div class="row gy-4">
+                    <div class="col-lg-12">
+                        <form action="home/contact" method="post" target="_blank">
+                            <div class="row gy-4">
 
-                <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Nama Anda" required>
+                                <div class="col-md-12">
+                                    <input type="text" name="name" class="form-control" placeholder="Nama Anda"
+                                        required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6"
+                                        placeholder="Tuliskan pesan anda disini.." required></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+
+                                    <button name="send" class="btn btn-primary" type="submit">Kirim Pesan</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+
                 </div>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Tuliskan pesan anda disini.." required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                 
-                  <button name="send" class="btn btn-primary" type="submit">Kirim Pesan</button>
-                </div>
-
-              </div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
+            </div>
+        </section><!-- End Contact Section -->
     </main>
     <!-- End #main -->
